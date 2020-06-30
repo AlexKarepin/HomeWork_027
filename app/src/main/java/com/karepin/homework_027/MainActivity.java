@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 char result = string.charAt(1);
                 // Задаем начальные координаты
         if (Character.isLetter(result)) {
-                Uri uri = Uri.parse("geo:" + editText.getText());
+                Uri uri = Uri.parse("geo:?q=" + editText.getText());
             // Передаем uri
             intent.setData(uri);
         } else {
-            Uri uri = Uri.parse("geo:?q=" + editText.getText().toString());
+            Uri uri = Uri.parse("geo:" + editText.getText().toString());
             // Передаем uri
             intent.setData(uri);
         }
